@@ -1,0 +1,33 @@
+{% extends "base/base.html" %}
+{% block booking_no %} {{ object.booking_no }} {% endblock %}
+
+{% block content %}
+
+<h1>Order Detail</h1>
+
+<ul>
+
+<li>Booking {{ object.booking_no }}
+<li>Grade {{ object.container.container_grade }}
+<li>Container  {{ object.container }}
+<li>Pick up date {{ object.date }}
+<li>Order Date {{ object.booking_date }}
+<li>Amount {{ object.amount }}
+
+</ul>
+<a href="{% url 'order:order_list' %}">Back</a>
+<a href="{% url 'order:update_order' object.booking_no %}">Update</a>
+<a href="{% url 'order:order_delete' object.booking_no %}">Delete</a>
+{% endblock %}
+<!--{% if latest_order_list %}-->
+<!--    <ul>-->
+<!--    {% for containertype in latest_order_list %}-->
+<!--        <li>-->
+<!--            <a href="/order/{{ containertype.id }}/">{{ containertype }}</a>-->
+<!--            <a href="/order/{{ containertype.id }}/">{{ containertype.container_grade}}</a>-->
+<!--        </li>-->
+<!--    {% endfor %}-->
+<!--    </ul>-->
+<!--{% else %}-->
+<!--    <p>No orders are available.</p>-->
+<!--{% endif %}-->

@@ -1,0 +1,57 @@
+{% extends "base/base.html" %}
+{% block booking_no %} Booking list {% endblock %}
+
+{% block content %}
+
+<ul>
+<h1>Booking list</h1>
+</ul>
+<li>
+<ul>
+    <a href="{% url 'order:create_order' %}">
+        Create
+    </a>
+    {% for object in page_obj %}
+
+    <li>
+    <a href="{{ object.get_absolute_url }}">
+        {{ object.booking_no  }}
+    </a>
+    <a href="{{ object.get_absolute_url }}">
+        {{ object.container  }}
+    </a>
+    </li>
+    {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</ul>
+{% endblock %}
+
+<!--{% if latest_order_list %}-->
+<!--    <ul>-->
+<!--    {% for containertype in latest_order_list %}-->
+<!--        <li>-->
+<!--            <a href="/order/{{ containertype.id }}/">{{ containertype }}</a>-->
+<!--            <a href="/order/{{ containertype.id }}/">{{ containertype.container_grade}}</a>-->
+<!--        </li>-->
+<!--    {% endfor %}-->
+<!--    </ul>-->
+<!--{% else %}-->
+<!--    <p>No orders are available.</p>-->
+<!--{% endif %}-->
