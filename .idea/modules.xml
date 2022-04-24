@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/KinoPython.iml" filepath="$PROJECT_DIR$/.idea/KinoPython.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/container reservation.iml" filepath="$PROJECT_DIR$/.idea/container reservation.iml" />
     </modules>
   </component>
 </project>
