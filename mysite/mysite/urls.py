@@ -21,5 +21,5 @@ from  django.contrib import admin
 urlpatterns = [
     path('order/', include('order.urls')),
     path('admin/', admin.site.urls),
-    path('', include('common.urls'))
+    path('', include('order.urls'))
 ]

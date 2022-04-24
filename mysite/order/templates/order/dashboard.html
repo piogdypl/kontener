@@ -12,20 +12,10 @@
      <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 </head>
 
-<div class="searchbox">
-    <form method="GET">
-        {{ filter.form }}
-      <button type="submit" class="btn btn-primary">Search</button>
-    </form>
-</div>
-<!--        <div class="row">-->
-<!--            <li>-->
-<!--                <a href="{ url:order_list booking_no.id }">{{ booking_no.title }}</a>-->
-<!--            </li>-->
-<!--        </div>-->
+
 
 <div class="main">
-<h1>Booking list</h1>
+<h2>last entries</h2>
 </div>
 
 
@@ -85,26 +75,11 @@
          </table>
 
     </div>
-
-<div class="main">
-        <div class="pagination">
-            <span class="step-links">
-                {% if page_obj.has_previous %}
-                    <a href="?page=1">&laquo; first</a>
-                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-                {% endif %}
-
-                <span class="current">
-                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-                </span>
-
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}">next</a>
-                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-                {% endif %}
-            </span>
-        </div>
+<div class="disclaimer">
+    To create, update or search container pick up orders go to menu on left side.</br>
+    You need to have booking number to create valid pick up order!</br>
 </div>
+
 {% endblock %}
 
 <!--{% if latest_order_list %}-->

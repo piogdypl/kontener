@@ -7,15 +7,16 @@
 
 <ul>
 
-<li>Booking {{ object.booking_no }}
-<li>Grade {{ object.container.container_grade }}
-<li>Container  {{ object.container }}
-<li>Pick up date {{ object.date }}
-<li>Order Date {{ object.booking_date }}
-<li>Amount {{ object.amount }}
+<li>Booking: {{ object.booking_no }}
+<li>Grade: {{ object.container_grade }}
+<li>Container:  {{ object.container }}
+<li>Pick up date: {{ object.date }}
+<li>Order Date: {{ object.booking_date }}
+<li>Amount: {{ object.amount }}
+<li>Remarks: {{ object.remarks }}
 
 </ul>
-<a href="{% url 'order:order_list' %}">Back</a>
+<a href="{% url 'order:dashboard' %}">Back</a>
 <a href="{% url 'order:update_order' object.booking_no %}">Update</a>
 <a href="{% url 'order:order_delete' object.booking_no %}">Delete</a>
 {% endblock %}

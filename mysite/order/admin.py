@@ -16,19 +16,23 @@ class Order(admin.ModelAdmin):
         'container',
         'date',
         'booking_date',
+        'haulier',
         'amount',
+        'remarks',
     )
     list_filter = (
         'booking_no',
         'container',
         'date',
         'booking_date',
+        'haulier',
         'amount',
+        'remarks',
     )
     search_fields = [
         'booking_no',
     ]
-    # prepopulated_fields = {'booking_no':('container',)}
+
 # Register your models here.
 
 
