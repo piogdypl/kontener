@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block booking_no %} Order create {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+<div class="list">
+
+    <h2>Insert order detail</h2>
+<form action=" " method ="POST" class="inst">
+    {{ form.as_p }}
+    {% csrf_token %}
+<button input type="submit" value="{{booking_no}}" text="Create">Create
+<!--    <input type="submit" value="{{booking_no}}" text="Create">-->
+</button>
+</form>
+          <div class="disclaimer">
+           You need to have booking number to create valid pick up order!</br>
+         </div>
+</div>
+
+
+
+
+</body>
+</html>
+{% endblock %}

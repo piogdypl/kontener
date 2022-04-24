@@ -1,0 +1,92 @@
+.delete {
+position: fixed;
+top: 50%;
+left: 50%;
+
+text-align: center;
+border: 1px solid #F3120D;
+background-color: #FF3A28;
+padding: 10px;
+border-radius: 5px;
+
+
+}
+
+.list {
+display: grid;
+justify-content: center;
+width: 100%;
+text-align: center;
+
+}
+
+
+.tablerow{
+background-color: #84DCCF;
+padding: 10px;
+grid-row: 1;
+border: 1px solid #BF98A0;
+text-decoration:none;
+}
+
+.tablerow:hover {
+background-color: #2F8DB0;
+}
+
+.head {
+background-color: #918c8c;
+border: 1px solid #BF98A0;
+}
+
+.searchbox {
+display: grid;
+font-size: 80%;
+justify-content: center;
+width: 100%;
+text-align: center;
+padding-top: 5px;
+}
+
+.header{
+padding: 5px;
+}
+
+.main{
+display: grid;
+justify-content: center;
+padding-top: 10px;
+}
+
+.welcome {
+position: fixed;
+top: 50%;
+left: 50%;
+
+text-align: center;
+border: 1px solid #F3120D;
+background-color: #A22F2C;
+padding: 10px;
+border-radius: 5px;
+
+
+}
+
+.click{
+padding-top: 2px;
+}
+
+.inst{
+display: grid;
+justify-content: left;
+width: 25%;
+text-align: right;
+padding-top: 10px;
+}
+
+.disclaimer{
+display: grid;
+justify-content: center;
+width: 100%;
+text-align: center;
+padding-top: 10px;
+}

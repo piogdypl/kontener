@@ -1,0 +1,36 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block booking_no %} Booking list {% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+
+<div class="delete">
+    <div class="row">
+
+            <tr><form method="post">
+            {% csrf_token %}
+            <p>Please confirm deleting order {{ object }}</p>
+            <input type="submit" value="Confirm">
+        </form>
+
+        <form method="post" class="click">
+              {% csrf_token %}
+            <a href="{% url 'order:order_list' %}"></a>
+        <input type="submit" value="Back">
+         </form>
+    </div>
+
+</div>
+</body>
+</html>
+
+{% endblock %}
