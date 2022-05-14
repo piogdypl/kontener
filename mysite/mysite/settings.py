@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'order.apps.OrderConfig',
     'django_filters',
-    'dj_database_url',
+
 ]
 
 MIDDLEWARE = [
